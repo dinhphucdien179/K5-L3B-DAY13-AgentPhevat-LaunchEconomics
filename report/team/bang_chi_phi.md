@@ -25,7 +25,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | Hoá đơn token và tool chia cho số yêu cầu | 274,65 | (Token + tool) ÷ 1.200 | đo từ trace |
 
 - Chi phí mỗi việc thành công gấp **16,28 lần** hoá đơn trên mỗi yêu cầu [simulated].
-- Làm lại chiếm tỷ trọng lớn nhất với **51,8%** tổng chi phí. Xem lại chiếm 40,7% [simulated].
+- Làm lại chiếm tỷ trọng lớn nhất với **51,8%** tổng chi phí, xem lại chiếm 40,7% [simulated]. Cộng lại, giờ nhân viên chiếm (1.780.000 + 2.264.000) ÷ 4.373.585 = **92,5%** [simulated].
 - Theo quy ước B3, cộng 222 yêu cầu chưa thành công × 12.000 đ vào chi phí trợ lý rồi chia cho 1.200 yêu cầu. Chi phí biến đổi toàn hệ thống là **5.864,65 đ/yêu cầu**, bằng **0,49×** mức nhân viên tự làm [simulated].
 
 ## A3 · Tách theo loại yêu cầu
@@ -37,7 +37,9 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | `quoc_te` | 150 | 27,3% | 2,32 | 22.515 đ [simulated] | 1,88× [simulated] |
 | `doi_tac` | 68 | 54,4% | 1,88 | 10.215 đ [simulated] | 0,85× [simulated] |
 
-- `quoc_te` tốn 1,88× mức nhân viên tự làm [simulated] và chỉ thành công 41/150 yêu cầu sau trung bình 2,32 lượt. Tỷ lệ `status == 'ok'` giảm từ 30,0% xuống 11,4% rồi 2,2%. Lượt 2 thêm 9 yêu cầu thành công, lượt 3 thêm 0.
+- `quoc_te` là loại không đáng để trợ lý xử lý. Mỗi việc thành công tốn 22.515 đ, gấp 1,88 lần nhân viên tự làm [simulated], mà chỉ 41/150 yêu cầu thành công (27,3%) dù trung bình chạy 2,32 lượt.
+- Cho chạy lại tới 3 lần cũng không giúp. Tỷ lệ lượt `ok` giảm từ 30,0% xuống 11,4% rồi 2,2%. Lượt 2 chỉ cứu thêm 9 yêu cầu, lượt 3 không thêm yêu cầu nào. Lỗi lặp lại trên cùng một yêu cầu nên chạy lại chỉ tốn thêm tiền.
+- `doi_tac` sát ngưỡng, 0,85× [simulated] với 37/68 yêu cầu thành công, lại có điều khoản riêng, nên nhóm cũng để ngoài phạm vi pilot.
 
 ## A4 · Chi phí cố định (phạm vi noi_dia + hang_nang)
 
@@ -79,7 +81,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | 2 lần | 4.093.220 đ | 234 | **6.901.220 đ** | 4.237 đ |
 | 3 lần | 4.373.585 đ | 222 | 7.037.585 đ | 4.472 đ |
 
-Trên 1.200 yêu cầu, chi phí hệ thống gồm chi phí trợ lý cộng 12.000 đ cho mỗi yêu cầu không thành công. Giới hạn **2 lượt** có chi phí hệ thống thấp nhất, **6.901.220 đ** [simulated]. Giới hạn **1 lượt** cho **4.111 đ/việc thành công** [simulated], thấp nhất theo chỉ số này, và chuyển thêm 85 ca cho nhân viên so với 2 lượt.
+Trên 1.200 yêu cầu, chi phí hệ thống gồm chi phí trợ lý cộng 12.000 đ cho mỗi yêu cầu không thành công. Giới hạn **2 lượt** có chi phí hệ thống thấp nhất, **6.901.220 đ** [simulated]. Hai giới hạn này **không trùng**. Giới hạn **1 lượt** cho **4.111 đ/việc thành công** [simulated], thấp nhất theo chỉ số này, nhưng chuyển thêm cho nhân viên 85 ca so với 2 lượt và 97 ca so với 3 lượt.
 
 ## B4 · Nếu phải xem lại tất cả
 
