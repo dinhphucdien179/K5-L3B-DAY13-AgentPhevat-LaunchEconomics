@@ -4,6 +4,8 @@ Không cần khoá API. Dữ liệu trong hai file CSV là giả lập.
 Bản gốc chưa sửa nằm ở lab13_starter.py.
 """
 import math
+from statistics import NormalDist
+
 import pandas as pd
 
 # Bảng giá GIẢ ĐỊNH của lab (không phải giá thật của nhà cung cấp nào)
@@ -214,6 +216,60 @@ def in_bang_b4(runs, reqs):
               f'hòa vốn ở {phut_hoa_von:.1f} phút/lượt xem lại (simulated)')
 
 
+def co_mau_hai_ti_le(p1, p2, alpha, power):
+    """Cỡ mẫu mỗi nhóm theo công thức so sánh hai tỉ lệ trong đề."""
+    chuan = NormalDist()
+    z_alpha = chuan.inv_cdf(1 - alpha / 2)
+    z_power = chuan.inv_cdf(power)
+    p_trung_binh = (p1 + p2) / 2
+    do_lech_gop = math.sqrt(2 * p_trung_binh * (1 - p_trung_binh))
+    do_lech_rieng = math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))
+    return math.ceil(((z_alpha * do_lech_gop + z_power * do_lech_rieng) / (p2 - p1)) ** 2)
+
+
+def in_co_mau_d1():
+    """In cỡ mẫu của năm phương án và power ở mức chênh 5 điểm."""
+    from statsmodels.stats.power import NormalIndPower
+    from statsmodels.stats.proportion import proportion_effectsize
+
+    baseline, alpha, power, icc = 0.70, 0.05, 0.80, 0.02
+    so_nhan_vien_nhom, so_depot_nhom = 20, 6
+    n_5 = co_mau_hai_ti_le(baseline, 0.75, alpha, power)
+    n_6 = co_mau_hai_ti_le(baseline, 0.76, alpha, power)
+
+    m_75 = 75
+    de_75 = 1 + (m_75 - 1) * icc
+    n_75 = math.ceil(n_5 * de_75)
+    nhan_vien_75 = math.ceil(n_75 / m_75)
+
+    # Giải số yêu cầu mỗi nhân viên từ bất đẳng thức c * m / DE >= n_6.
+    m_toi_thieu = math.ceil(n_6 * (1 - icc) / (so_nhan_vien_nhom - n_6 * icc))
+    de = 1 + (m_toi_thieu - 1) * icc
+    n_thuc = so_nhan_vien_nhom * m_toi_thieu
+    n_hieu_dung = n_thuc / de
+    hieu_ung_5 = proportion_effectsize(baseline, 0.75)
+    power_5 = NormalIndPower().power(hieu_ung_5, nobs1=n_hieu_dung, alpha=alpha)
+
+    print('\nD1 · Cỡ mẫu pilot')
+    print(f'a) Chia theo yêu cầu (+5 điểm): {n_5:,d} yêu cầu/nhóm')
+    print(f'b) {m_75} yêu cầu/nhân viên: DE {de_75:.2f}, cần ít nhất {n_75:,d} yêu cầu/nhóm '
+          f'và {nhan_vien_75} nhân viên/nhóm ({nhan_vien_75 * m_75:,d} yêu cầu khi làm tròn cụm)')
+    print(f'c) {so_nhan_vien_nhom} nhân viên/nhóm: n hiệu dụng < {so_nhan_vien_nhom / icc:,.0f}')
+    print(f'd) {so_depot_nhom} depot/nhóm: n hiệu dụng < {so_depot_nhom / icc:,.0f}')
+    print(f'e) +6 điểm: cần {n_6:,d} hiệu dụng/nhóm, tối thiểu {m_toi_thieu} yêu cầu/nhân viên, '
+          f'DE {de:.2f}, {n_thuc:,d} yêu cầu/nhóm cho {n_hieu_dung:,.2f} hiệu dụng/nhóm')
+    print(f'   Power ở +5 điểm với thiết kế này: {power_5:.1%}')
+
+
+def in_ty_le_mo_lai_d3(reqs):
+    """In mốc an toàn cho toàn mẫu và phạm vi pilot."""
+    reqs_pham_vi = reqs.loc[reqs['loai'].isin(['noi_dia', 'hang_nang'])]
+    print('\nD3 · Tỉ lệ mở lại trong 7 ngày của đợt chạy thử')
+    for ten, nhom in (('Toàn mẫu', reqs), ('noi_dia + hang_nang', reqs_pham_vi)):
+        mo_lai = nhom['mo_lai_trong_7_ngay'].eq(1).sum()
+        print(f'{ten}: {mo_lai}/{len(nhom):,d} ({mo_lai / len(nhom):.2%})')
+
+
 if __name__ == '__main__':
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
@@ -233,6 +289,5 @@ if __name__ == '__main__':
     in_bang_a4(runs, reqs)
     in_bang_b1_b3(runs, reqs, ket_qua['cps'])
     in_bang_b4(runs, reqs)
-    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
-    #   from statsmodels.stats.proportion import proportion_effectsize
-    #   from statsmodels.stats.power import NormalIndPower
+    in_co_mau_d1()
+    in_ty_le_mo_lai_d3(reqs)
