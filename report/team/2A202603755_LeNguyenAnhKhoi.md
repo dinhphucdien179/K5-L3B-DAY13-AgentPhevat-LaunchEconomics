@@ -22,11 +22,11 @@
 ## 4. Bằng chứng
 
 - Kiểm tay A1 với xác suất đúng 0,8 và giới hạn 2 lượt. Mọi yêu cầu chạy lượt đầu và chỉ 20% cần lượt thứ hai, nên số lượt kỳ vọng là 1 + 0,2 = 1,20. Ba phép thử A1 đều đạt.
-- Giới hạn 2 lượt cho chi phí hệ thống thấp nhất, 6.901.220 đ trên 1.200 yêu cầu. Giới hạn 1 lượt cho chi phí mỗi việc thành công thấp nhất, 4.111 đ [simulated]. [Bảng chi phí](bang_chi_phi.md)
+- Giới hạn 2 lượt cho chi phí hệ thống thấp nhất, 6.901.220 đ trên 1.200 yêu cầu [simulated]. Giới hạn 1 lượt cho chi phí mỗi việc thành công thấp nhất, 4.111 đ [simulated]. [Bảng chi phí](bang_chi_phi.md)
 - Chạy `..\.venv\Scripts\python.exe -X utf8 lab13.py` từ `src/` để tái hiện A1–B4, D1 và tỷ lệ mở lại dùng ở D3.
 - Đối chiếu D1 bằng phép tính 20 × 299 ÷ 6,96 = 859,20 yêu cầu hiệu dụng trên 5.980 yêu cầu thực tế mỗi nhóm. Ở 298 yêu cầu mỗi người, cỡ mẫu hiệu dụng chỉ đạt 858,79, dưới mức cần là 859.
 - Đợt chạy thử có 51/1.200 yêu cầu mở lại trong 7 ngày (4,25%). Trong phạm vi pilot, con số là 39/982 (3,97%). [Kế hoạch pilot](pilot_plan.yaml)
-- CP3 đang chờ hai bộ nhãn từ hai người khác nhau. Phiếu lượt 1 lưu tại `tmp/02-task-b-nhan-doc-lap.md`. Người gắn nhãn thứ hai cần chốt đủ 20 ca trước khi hai người mở nhãn để đối chiếu. [Bảng lỗi](bang_loi.md)
+- Ở CP3, bản nháp nhãn lượt 1 do Codex gắn đã bị nhóm bỏ. Em gắn lại 20 ca trên phiếu riêng, độc lập với Nhân, rồi gửi Diên ghép. [Bảng lỗi](bang_loi.md)
 
 ## 5. Công cụ AI đã dùng
 
