@@ -35,7 +35,7 @@ Khi rà lại hồ sơ, em phát hiện hai chỗ cần sửa:
 
 Lúc làm phần A trên lớp, em dùng Codex để hỗ trợ viết code và soát lại cách tính. Em tự kiểm bằng cách tính tay một số khoản. Ví dụ, 5.600 lượt gọi tool nhân 15 đ ra 84.000 đ, khớp với bảng A2.
 
-Sau buổi lab, em dùng thêm Claude Code để đọc lại toàn bộ đề và hồ sơ của nhóm, chạy lại các lệnh kiểm tra, rồi soạn và sửa một số phần trong hồ sơ. Phần gắn nhãn CP3 không dùng AI: hai bạn tự gắn trên phiếu riêng.
+Sau buổi lab, em dùng thêm Claude Code để đọc lại toàn bộ đề và hồ sơ của nhóm, chạy lại các lệnh kiểm tra, rồi soạn và sửa một số phần trong hồ sơ. Phần gắn nhãn CP3 không dùng AI: hai bạn tự gắn trên phiếu riêng. Khi làm hội đồng chấm nhóm Aliba6, em cũng nhờ Claude Code đối chiếu hồ sơ của họ với rubric. Sau đó em tự mở lại từng file và dòng được dẫn trong phiếu chấm để kiểm tra trước khi chốt điểm.
 
 Trước khi commit, em đọc lại từng thay đổi, chạy lại `lab13.py` để chắc các số không đổi, và tự tính lại những số mới. Chẳng hạn 17/93 = 18,28%, còn 1,96² × 0,15 × 0,85 ÷ 0,04² ≈ 306,1, làm tròn lên thành 307.
 
