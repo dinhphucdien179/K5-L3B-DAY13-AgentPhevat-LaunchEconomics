@@ -28,10 +28,18 @@ pilot:
     Nhân viên tiếp tục xử lý quoc_te và doi_tac.
   max_attempts: 2
   review_policy: >-
-    Nhân viên xem lại 100% yêu cầu có lượt ok trước khi gửi, xác nhận số tiền và kiểm tra
-    hoàn trùng. Sau tối đa 2 lượt, ca chưa hoàn tất đi vào luồng thủ công.
-    Đo thời gian xem lại và làm lại thực tế. B4 ước tính ngưỡng hòa vốn khoảng
-    4,8 phút xem lại khi dùng thời gian làm lại trung bình toàn mẫu (simulated).
+    Bậc 10% (07/12–20/12/2026): nhân viên xem lại 100% yêu cầu có lượt ok trước khi gửi,
+    xác nhận số tiền và kiểm tra hoàn trùng. Sau tối đa 2 lượt, ca chưa hoàn tất đi vào
+    luồng thủ công. Đo thời gian xem lại và làm lại thực tế. Theo B4, xem lại 100% tốn
+    11.743–12.415 đ/việc thành công, bằng 0,98–1,03× mức thủ công (simulated), hòa vốn
+    khoảng 4,8 phút xem lại khi dùng thời gian làm lại trung bình toàn mẫu (simulated).
+    Từ bậc 25% (21/12/2026), Trưởng nhóm CSKH chỉ giảm xem lại noi_dia xuống 50%, bốc
+    ngẫu nhiên theo yêu cầu, khi trong 1 tuần có ít nhất 307 lượt xem lại noi_dia, tỉ lệ
+    sửa hoặc bỏ dưới 15% và luật an toàn không kích. 307 = 1,96² × 0,15 × 0,85 ÷ 0,04²,
+    đủ ước lượng mức 15% với sai số 4 điểm. Đợt chạy thử có noi_dia sửa hoặc bỏ
+    17/93 = 18,28%, chưa đạt ngưỡng. hang_nang giữ xem lại 100% vì A3 chỉ thành công
+    74,1% và đợt chạy thử có 10/35 = 28,57% sửa hoặc bỏ. Mức xem lại chốt trước
+    04/01/2027 và giữ nguyên trong cửa sổ phân tích 04/01–31/01/2027.
   assignment:
     unit: staff
     control_share: 0.5

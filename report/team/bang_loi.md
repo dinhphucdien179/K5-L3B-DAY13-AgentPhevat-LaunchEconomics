@@ -4,43 +4,43 @@ Phân loại 20 ca theo nguyên nhân gốc. Mỗi người gắn nhãn đọc m
 
 ## Hai bộ nhãn độc lập
 
-File lượt 1 mang tên Lê Nguyễn Anh Khôi ghi rõ đây là bản nháp do Codex gắn nhãn. Phiếu lượt 2 của Lê Nguyễn Anh Nhân hiện chưa có nhãn. Hồ sơ đang chờ **2 bộ nhãn độc lập đã chốt** để tính đồng thuận.
+Bộ nhãn "lượt 1" có trong repo trước đây mang tên Lê Nguyễn Anh Khôi, nhưng thực chất là bản nháp do Codex gắn. RULES.md không cho dùng AI để tạo nhãn lỗi, nên nhóm bỏ bản này và không dùng nó để tính đồng thuận.
 
-- **Đồng thuận trong nhóm** sẽ tính bằng số ca có hai nhãn gốc giống nhau ÷ 20, với mốc 16/20 (80%).
-- **Khớp đáp án** sẽ tính bằng số ca có nhãn nhóm thống nhất trùng nhãn tham khảo ÷ 20, với mốc 16/20.
-- Khi nhận đủ hai phiếu, giữ nguyên hai bộ nhãn gốc. Với mỗi ca lệch, ghi nguyên nhân gốc, quy tắc phân biệt và nhãn đã thống nhất. Nếu đồng thuận dưới 80%, ghi định nghĩa đã làm rõ và giữ tỷ lệ tính từ hai phiếu gốc.
+Nhóm có 3 người, nên hai người gắn nhãn là Lê Nguyễn Anh Khôi (người kiểm số) và Lê Nguyễn Anh Nhân (người giữ hồ sơ). Mỗi bạn tự gắn đủ 20 ca trên một phiếu trống riêng, không trao đổi với nhau. Trên phiếu, mỗi bạn ghi giờ bắt đầu, giờ chốt và cho biết trước đó đã từng xem nhãn tham khảo hay chưa. Đinh Phúc Diên không gắn nhãn, chỉ nhận hai phiếu để ghép và tính kết quả.
+
+Tỷ lệ đồng thuận là số ca hai người gắn trùng nhau chia cho 20, và cần đạt ít nhất 16/20. Số ca khớp đáp án được tính riêng, bằng cách so nhãn thống nhất của nhóm với nhãn tham khảo.
+
+Hai bộ nhãn gốc giữ nguyên sau khi so. Với mỗi ca lệch, nhóm ghi một câu quy tắc phân biệt và nhãn đã thống nhất. Nếu đồng thuận dưới 80%, nhóm viết lại định nghĩa rồi gắn lại vòng hai, nhưng vẫn giữ tỷ lệ của vòng đầu.
 
 <details>
-<summary>Nhãn rà soát và đáp án của 20 ca — xem sau khi chốt hai phiếu</summary>
+<summary>Nhãn tham khảo của 20 ca — chỉ mở sau khi chốt hai phiếu</summary>
 
 ## Bảng đối chiếu
 
-Cột **Nhãn rà soát** ghi kết quả Codex phân loại từ mô tả ca trong đề gốc. Cột **Nhãn tham khảo** lấy từ [hướng dẫn Lab 13, mục Nhãn tham khảo cho 20 ca](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhãn-tham-khảo-cho-20-ca). Dấu — đánh dấu ô chờ bộ nhãn gốc hoặc kết quả thống nhất của nhóm.
+Cột **Nhãn tham khảo** lấy từ [hướng dẫn Lab 13, mục Nhãn tham khảo cho 20 ca](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhãn-tham-khảo-cho-20-ca). Dấu — đánh dấu ô chờ hai phiếu gốc hoặc kết quả thống nhất của nhóm.
 
-Rà soát bản nháp Codex theo số ca cho kết quả **20/20 nhãn trùng cột tham khảo**. Chỉ số đồng thuận trong nhóm vẫn chờ hai phiếu gốc.
-
-| Ca | Nhãn người 1 | Nhãn người 2 | Trùng | Nhãn thống nhất | Nhãn rà soát (Codex) | Nhãn tham khảo |
-| ---: | --- | --- | --- | --- | --- | --- |
-| 1 | — | — | — | — | Do người dùng | Do người dùng |
-| 2 | — | — | — | — | Hệ thống | Hệ thống |
-| 3 | — | — | — | — | Ngữ cảnh | Ngữ cảnh |
-| 4 | — | — | — | — | Giới hạn hệ thống | Giới hạn hệ thống |
-| 5 | — | — | — | — | Ngầm | Ngầm |
-| 6 | — | — | — | — | Do người dùng | Do người dùng |
-| 7 | — | — | — | — | Hệ thống | Hệ thống |
-| 8 | — | — | — | — | Hệ thống | Hệ thống |
-| 9 | — | — | — | — | Do người dùng | Do người dùng |
-| 10 | — | — | — | — | Ngữ cảnh | Ngữ cảnh |
-| 11 | — | — | — | — | Giới hạn hệ thống | Giới hạn hệ thống |
-| 12 | — | — | — | — | Ngầm | Ngầm |
-| 13 | — | — | — | — | Giới hạn hệ thống | Giới hạn hệ thống |
-| 14 | — | — | — | — | Do người dùng | Do người dùng |
-| 15 | — | — | — | — | Hệ thống | Hệ thống |
-| 16 | — | — | — | — | Ngữ cảnh | Ngữ cảnh |
-| 17 | — | — | — | — | Ngầm | Ngầm |
-| 18 | — | — | — | — | Ngữ cảnh | Ngữ cảnh |
-| 19 | — | — | — | — | Giới hạn hệ thống | Giới hạn hệ thống |
-| 20 | — | — | — | — | Hệ thống | Hệ thống |
+| Ca | Nhãn người 1 | Nhãn người 2 | Trùng | Nhãn thống nhất | Nhãn tham khảo |
+| ---: | --- | --- | --- | --- | --- |
+| 1 | — | — | — | — | Do người dùng |
+| 2 | — | — | — | — | Hệ thống |
+| 3 | — | — | — | — | Ngữ cảnh |
+| 4 | — | — | — | — | Giới hạn hệ thống |
+| 5 | — | — | — | — | Ngầm |
+| 6 | — | — | — | — | Do người dùng |
+| 7 | — | — | — | — | Hệ thống |
+| 8 | — | — | — | — | Hệ thống |
+| 9 | — | — | — | — | Do người dùng |
+| 10 | — | — | — | — | Ngữ cảnh |
+| 11 | — | — | — | — | Giới hạn hệ thống |
+| 12 | — | — | — | — | Ngầm |
+| 13 | — | — | — | — | Giới hạn hệ thống |
+| 14 | — | — | — | — | Do người dùng |
+| 15 | — | — | — | — | Hệ thống |
+| 16 | — | — | — | — | Ngữ cảnh |
+| 17 | — | — | — | — | Ngầm |
+| 18 | — | — | — | — | Ngữ cảnh |
+| 19 | — | — | — | — | Giới hạn hệ thống |
+| 20 | — | — | — | — | Hệ thống |
 
 ### Quy tắc phân biệt khi đối chiếu
 
