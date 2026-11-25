@@ -79,7 +79,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | 2 lần | 4.093.220 đ | 234 | **6.901.220 đ** | 4.237 đ |
 | 3 lần | 4.373.585 đ | 222 | 7.037.585 đ | 4.472 đ |
 
-Trên 1.200 yêu cầu, chi phí hệ thống gồm chi phí trợ lý cộng 12.000 đ cho mỗi yêu cầu không thành công. Giới hạn **2 lượt** có chi phí hệ thống thấp nhất, **6.901.220 đ**. Giới hạn **1 lượt** cho **4.111 đ/việc thành công** [simulated], thấp nhất theo chỉ số này, và chuyển thêm 85 ca cho nhân viên so với 2 lượt.
+Trên 1.200 yêu cầu, chi phí hệ thống gồm chi phí trợ lý cộng 12.000 đ cho mỗi yêu cầu không thành công. Giới hạn **2 lượt** có chi phí hệ thống thấp nhất, **6.901.220 đ** [simulated]. Giới hạn **1 lượt** cho **4.111 đ/việc thành công** [simulated], thấp nhất theo chỉ số này, và chuyển thêm 85 ca cho nhân viên so với 2 lượt.
 
 ## B4 · Nếu phải xem lại tất cả
 
