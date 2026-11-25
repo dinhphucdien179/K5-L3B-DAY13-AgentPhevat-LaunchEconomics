@@ -2,51 +2,20 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm:
-- Lớp: L3A hoặc L3B
-- Repo nhóm: `K5-L3A-DAY13-TenNhom-LaunchEconomics` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt:
+- Tên nhóm: AgentPhevat
+- Lớp: L3B
+- Số thành viên thực tế: 3
+- Repo nhóm: `K5-L3B-DAY13-AgentPhevat-LaunchEconomics`
+- URL repo: [AgentPhevat trên GitHub](https://github.com/dinhphucdien179/K5-L3B-DAY13-AgentPhevat-LaunchEconomics)
+- Nhánh làm Task D: `LeNguyenAnhNhan`
+- Nhánh nộp nhóm: `main` sau khi tích hợp Task D. SHA chốt chờ bản nộp trên GitHub.
 
 ## Thành viên
 
-| STT | Họ tên | MSSV | Email | GitHub | Vai trò |
-| --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
-|   3 |        |      |       |        |         |
-|   4 |        |      |       |        |         |
+| STT | Họ tên | MSSV | GitHub | Vai trò và bằng chứng |
+| ---: | --- | --- | --- | --- |
+| 1 | Đinh Phúc Diên | 2A202603876 | `dinhphucdien179` | Viết code chi phí A1–A4. [Báo cáo cá nhân](report/team/2A202603876_DinhPhucDien.md) |
+| 2 | Lê Nguyễn Anh Khôi | 2A202603755 | `KN-16` | Kiểm số, làm độ nhạy CP2 và thiết kế pilot CP4. [Báo cáo cá nhân](report/team/2A202603755_LeNguyenAnhKhoi.md) |
+| 3 | Lê Nguyễn Anh Nhân | 2A202603838 | `ying684` | Giữ hồ sơ Gate 2a, hoàn thiện CP5, rà CP3 và đề xuất khắc phục 5 ca. [Báo cáo cá nhân](report/team/2A202603838_LeNguyenAnhNhan.md) |
 
-Bốn vai của lab:
-
-- **Người viết code:** viết và chạy `src/lab13.py`.
-- **Người kiểm số:** tính tay một con số để đối chiếu, điền bảng.
-- **Người gắn nhãn 1:** đọc đề, theo dõi điều kiện "Xong khi"; gắn nhãn 20 ca độc lập ở CP3.
-- **Người gắn nhãn 2, kiêm giữ hồ sơ:** điền `report/team/ho_so_launch_v0.md` từ đầu buổi; gắn nhãn 20 ca độc lập ở CP3.
-
-Đổi người viết code sau giờ giải lao, để ít nhất hai người trong nhóm tự tay tính được chi phí.
-
-## Cá nhân
-
-Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/` theo dạng:
-
-```text
-report/team/MSSV_HoTen.md
-```
-
-Ví dụ: `report/team/20241234_NguyenVanAn.md`.
-
-Sao chép mục dưới đây cho từng thành viên.
-
-## HoVaTen-MSSV
-
-### Phần việc phụ trách
-
--
-
-### Đóng góp cụ thể
-
--
-
-### Bằng chứng
-
--
+CP3 có bảng tham khảo và đề xuất khắc phục cho 5 loại lỗi. Hồ sơ còn chờ hai bộ nhãn độc lập đã chốt. [Bảng lỗi](report/team/bang_loi.md)

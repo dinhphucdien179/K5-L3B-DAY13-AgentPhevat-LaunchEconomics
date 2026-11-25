@@ -69,6 +69,7 @@ pilot:
     analysis: >-
       Tính tỉ lệ đóng trong 24 giờ và không mở lại trong 7 ngày trên tất cả yêu cầu
       đủ điều kiện theo nhóm được phân ban đầu, kể cả ca phải chuyển luồng thủ công.
+      Hai cửa sổ 24 giờ và 7 ngày tính từ thời điểm tiếp nhận yêu cầu.
       Ước lượng chênh lệch có điều chỉnh theo depot, với sai số theo cụm nhân viên.
       Đề xuất mở rộng pilot nếu chênh lệch đạt ít nhất +5 điểm, cận dưới khoảng tin cậy
       95% lớn hơn 0 và đạt các ngưỡng an toàn, chi phí, sử dụng. Nếu thiếu mẫu hoặc
@@ -82,11 +83,11 @@ pilot:
     predeclared: "Chốt phân bổ, chỉ số chính, các ngưỡng, lịch theo dõi và ngày quyết định trước bậc 10%."
   monitoring:
     safety: >-
-      Mỗi ngày so tỉ lệ mở lại trên các yêu cầu thuộc 7 ngày tiếp nhận gần nhất đã đủ
-      thời gian quan sát. Dùng cùng cửa sổ ở cả hai nhóm và cần ít nhất 100 yêu cầu
+      Mỗi ngày so tỉ lệ mở lại trong 7 ngày kể từ tiếp nhận, trên các yêu cầu thuộc
+      7 ngày tiếp nhận gần nhất đã đủ thời gian quan sát. Cần ít nhất 100 yêu cầu
       mỗi nhóm để xét tỉ lệ. Theo dõi hoàn trùng trong mọi ca trực.
     cost: >-
-      Chi phí hệ thống trung bình bằng tổng tiền token, tool và tiền công xem lại, làm lại
+      Chi phí biến đổi hệ thống trung bình bằng tổng tiền token, tool và tiền công xem lại, làm lại
       hoặc xử lý thủ công, chia cho mọi yêu cầu đủ điều kiện của nhóm trợ lý trong tuần.
       Tính mỗi phút của nhân viên một lần theo đơn giá 2.000 đ/phút.
     usage: "Tỉ lệ bỏ qua bằng số yêu cầu được sửa hoặc bỏ gợi ý chia cho số yêu cầu đã xem lại trong tuần."
@@ -100,7 +101,7 @@ pilot:
       tắt trợ lý trong 30 phút và cho đối soát giao dịch
       KHÔNG THÌ không bỏ bước kiểm tra hoàn trùng ở bậc hiện tại.
     - >-
-      NẾU chi phí hệ thống vượt 12.000 đ trên mỗi yêu cầu TRONG 2 tuần liên tiếp
+      NẾU chi phí biến đổi hệ thống vượt 12.000 đ trên mỗi yêu cầu TRONG 2 tuần liên tiếp
       THÌ Giám đốc vận hành giữ bậc và giao PM rà soát thời gian xem lại, làm lại
       KHÔNG THÌ không tăng bậc nếu chưa có đủ 2 tuần số liệu chi phí.
     - >-
